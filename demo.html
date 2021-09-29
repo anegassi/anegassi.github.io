@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title> Class Assignment
+</head>
+<body>
+    <p>
+        Name: &nbsp;&nbsp;
+        <input type="type" value="input"  /></input>
+        <button onclick="submit()">Submit</button>
+    </p>
+    <input id="id" type="button" onclick="submit()" /><input>
+    <p>
+
+    </p>
+    <script>
+        function submit(){
+           let element= document.getElementById("id")
+          // alert(element.value)
+          element.before("before")
+          element.after("after")
+
+            // if we want to append/prepend value dynamically follow this steps
+            let input= document.createElement("input")
+            input.type="text"
+            input.value="New"
+            document.body.append(input)
+        }
+    </script>
+</body>
+</html>

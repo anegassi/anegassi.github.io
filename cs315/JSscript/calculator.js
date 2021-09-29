@@ -9,8 +9,8 @@ let b=document.getElementById("secondvalue");
         output= document.getElementById("displayArea");
         output.innerHTML=result;
         
-        let pelement= document.createElement("p")
-       document.body.prepend(pelement)
+        //let pelement= document.createElement("p")
+       //document.body.prepend(pelement)
     
     }
      function subt(){
@@ -19,8 +19,8 @@ let b=document.getElementById("secondvalue");
         output= document.getElementById("displayArea");
         output.innerHTML=result;
         
-        let pelement= document.createElement("p")
-        document.body.prepend(pelement);
+        //let pelement= document.createElement("p")
+        //document.body.prepend(pelement);
 
     }
     function multi(){
@@ -29,8 +29,8 @@ let b=document.getElementById("secondvalue");
          output= document.getElementById("displayArea");
          output.innerHTML=result;
          
-         let pelement= document.createElement("p");
-          document.body.prepend(pelement);
+         //let pelement= document.createElement("p");
+          //document.body.prepend(pelement);
           
     }
 
@@ -43,8 +43,8 @@ let b=document.getElementById("secondvalue");
        textarea= document.getElementById("displayArea2");
        textarea.innerHTML=result;
        
-       let x = document.createElement("p");
-          document.body.append(result);
+       //let pelement = document.createElement("p");
+         // document.body.append(result);
 
     }
     
