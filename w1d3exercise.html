@@ -5,18 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+       .contentTable{
+             border-collapse: collapse;
+             margin: 25px 0;
+             font-size: 0.9em;
+             min-width: 400px;
+
+       }
+       .contentTable thead tr{
+         background-color: #009879;
+         color: #ffffff;
+         text-align: left;
+         font-weight: bold;
+       }
+       .contentTable th,
+       .contentTable td {
+         padding: 12px 15px;
+       }
+       .contentTable tbody tr{
+         border-bottom: 1px solid #dddddd;
+       }
+    </style>
   </head>
   <body>
     <h1>INVENTORY</h1>
     <br />
     <p>Item Name:</p>
-    <br />
+
     <input type="text" id="computers" value="Computers" /><br />
     <p>Item Category:</p>
-    <br />
+
     <input type="text" id="category" value="Digital" /><br />
     <p>Quantity:</p>
-    <br />
-    <input type="text" id="quantity" value="100" />
+
+    <input type="text" id="quantity" value="100" /><br />
+    <p>Raings</p>
+
+    <input type="number" id="ratings" value="" /><br />
+    <input type="button" value="" onclick="edit()" />Edit</input>
+    <input type="button" value="" onclick="remove()" />Remove</input>
+    <input type="button" value="" onclick="add()" />Add</input>
+    <br><br><br>
+    <table class="contentTable">
+        <thead>
+          
+          <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            
+          </tr>
+  
+         
+        </thead>
+  
+        <tbody>
+            <tr>
+                <td>Computers</td>
+                <td>Digital</td>
+                <td>100</td>
+              </tr>
+          <tr>
+            <td>Magazines</td>
+            <td>Convenience</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Books</td>
+            <td>Education</td>
+            <td>20</td>
+          </tr>
+
   </body>
 </html>
