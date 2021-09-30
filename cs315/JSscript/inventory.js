@@ -65,7 +65,17 @@ function sort(){
             
         }
 
-        else if(header.dataset.column=="quantity"){
+        
+    }
+    buildTable(libraryDB)
+}
+
+function sort1(){
+    let querySelect=document.querySelectorAll('table th');
+    for(let header of querySelect){
+        
+
+       if(header.dataset.column=="quantity"){
             if(header.dataset.order=="desc"){
             libraryDB.sort((a,b)=>a.quantity - b.quantity)
             header.innerHTML="Quantity &#9650"
