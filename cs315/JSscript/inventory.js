@@ -23,15 +23,15 @@ function add(){
        libraryDB.push(itemList)
        console.log(libraryDB)
        
-    buildTable()    
+    buildTable(libraryDB)    
 
 }
 
 
-function buildTable(){
+function buildTable(libraryDB2){
     var table = document.getElementById("myTable");
-    var row
-    for (var i = 0; i < libraryDB.length; i++){
+    table.innerHTML="";
+    for (var i = 0; i < libraryDB2.length; i++){
         
         row = `<tr>                    
                         <td>${libraryDB[i].productName}</td>
@@ -39,10 +39,51 @@ function buildTable(){
                         <td>${libraryDB[i].quantity}</td>
                         <td>${libraryDB[i].ratings}</td>
                   </tr>`
-        console.log(row)
-             
+    
+        table.innerHTML += row;
     }
-    table.innerHTML += row;   
+       
+}
+
+function sort(){
+    let querySelect=document.querySelectorAll('table th');
+    for(let header of querySelect){
+        if(header.dataset.column=="productname"){
+            if(header.dataset.order=="desc"){
+            libraryDB.sort((a,b)=>a.productName>b.productName?1:-1)
+            header.innerHTML="Product Name &#9650"
+            header.dataset.order="asc"
+            console.log(header.dataset.order)
+            }
+            else if(header.dataset.order=="asc"){
+                libraryDB.sort((a,b)=>a.productName<b.productName?1:-1)
+                header.innerHTML="Product Name &#9660"
+                header.dataset.order="desc"
+                console.log(header.dataset.order)
+            }
+            
+            
+        }
+
+        else if(header.dataset.column=="quantity"){
+            if(header.dataset.order=="desc"){
+            libraryDB.sort((a,b)=>a.quantity - b.quantity)
+            header.innerHTML="Quantity &#9650"
+            header.dataset.order="asc"
+            console.log(header.dataset.order)
+            }
+            else if(header.dataset.order=="asc"){
+                libraryDB.sort((a,b)=>b.quantity - a.quantity)
+                header.innerHTML="Quantity &#9660"
+                header.dataset.order="desc"
+                console.log(header.dataset.order)
+            }
+            
+            
+        }
+         
+    }
+    buildTable(libraryDB)
 }
 
 
