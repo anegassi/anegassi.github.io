@@ -35,14 +35,15 @@ let b=document.getElementById("secondvalue");
     }
 
     /////////////////////////////////
-    let  input= document.getElementById("displayArea1");
-
+    
     function print(){
+      let  input= document.getElementById("displayArea1");
      let result = input.value;
 
        textarea= document.getElementById("displayArea2");
        textarea.innerHTML=result;
-       
+       input.value=null;
+
        //let pelement = document.createElement("p");
          // document.body.append(result);
 
