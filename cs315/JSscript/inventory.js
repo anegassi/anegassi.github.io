@@ -38,6 +38,8 @@ function buildTable(libraryDB){
                        <td>${libraryDB[i].category}</td>
                         <td>${libraryDB[i].quantity}</td>
                         <td>${libraryDB[i].ratings}</td>
+                        <td> <button type="button" class="btn btn-info" onclick="delet()">Delete</button><td/>
+                        <td> <button type="button" class="btn btn-info" onclick="edit()">update</button><td/>
                   </tr>`
     
         table.innerHTML += row;
@@ -96,20 +98,25 @@ function sort1(){
     buildTable(libraryDB)
 }
 
-let filterFunction = () =>{
-    
+let filterFunction = function(){
+    console.log(this);
     let querySelector = document.querySelectorAll("button");
+    console.log(querySelector)
     let filtered = [];
-    for  (let i =0; i<querySelector.length; i++){
-        
-        if (i.id=="btnQuantity"){
+    for  (let button of querySelector){
+        console.log(button)
+        if (button.id=="btnQuantity"){
             filtered = libraryDB.filter( obj => obj.quantity>100);
-        }else{
+            break;
+        }
+        else if(button.id=="btnRating"){
             filtered = libraryDB.filter( obj => obj.ratings>4);
+            
         }
     }
     buildTable(filtered);
 }
+
 
 let filterQuantity = () =>{
     let filtered = [];
