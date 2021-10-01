@@ -10,10 +10,10 @@ function add(){
     let categoryInput = document.getElementById("itemcategory").value;
        // itemList.category=categoryInput
        //libraryDB.push(categoryInput);
-    let quantityInput = document.getElementById("quantity").value;
+    let quantityInput = +(document.getElementById("quantity").value);
       //itemList.quantity=categoryInput
        //libraryDB.push(quantityInput);
-    let ratingInput= document.getElementById("ratings").value;
+    let ratingInput= +(document.getElementById("ratings").value);
        const itemList = {
            productName:productNameInput,
            category:categoryInput,
@@ -28,10 +28,10 @@ function add(){
 }
 
 
-function buildTable(libraryDB2){
+function buildTable(libraryDB){
     var table = document.getElementById("myTable");
     table.innerHTML="";
-    for (var i = 0; i < libraryDB2.length; i++){
+    for (let i = 0; i < libraryDB.length; i++){
         
         row = `<tr>                    
                         <td>${libraryDB[i].productName}</td>
@@ -96,72 +96,40 @@ function sort1(){
     buildTable(libraryDB)
 }
 
+let filterFunction = () =>{
+    
+    let querySelector = document.querySelectorAll("button");
+    let filtered = [];
+    for  (let i =0; i<querySelector.length; i++){
+        
+        if (i.id=="btnQuantity"){
+            filtered = libraryDB.filter( obj => obj.quantity>100);
+        }else{
+            filtered = libraryDB.filter( obj => obj.ratings>4);
+        }
+    }
+    buildTable(filtered);
+}
 
+let filterQuantity = () =>{
+    let filtered = [];
+    filtered = libraryDB.filter( obj => obj.quantity>100);
+    // let querySelect = document.querySelectorAll('button');
 
-// let libraryDB = [];
+    // for (let button of querySelect){
+    //     if (button.id==btnQuantity){
+    //         filtered = libraryDB.filter( obj => obj.quantity>100);
+    
+    // }
+    buildTable(filtered);
+}
 
-//       function add() {
-//         let productNameInput = document.getElementById("itemname").value;
-// alert(productName)
-//         let categoryInput = document.getElementById("itemcategory").value;
-// alert(categoryInput)
-//         let quantityInput = document.getElementById("quantity").value;
-//         alert(quantityInput)
-//         let ratingInput = document.getElementById("ratings").value;
-//         const itemList = {
-//           productName: productNameInput,
-//           cateory: categoryInput,
-//           quantity: quantityInput,
-//           rating: ratingInput,
-//         };
-//         alert("hello");
-//         libraryDB.push(itemList);
-//         console.log(libraryDB);
-//         buildTable(libraryDB);
-//       }
+let filterRating = () =>{
+    let filtered = [];
+    filtered = libraryDB.filter( obj => obj.ratings>4);
+    buildTable(filtered);
+}
 
-     
-   
-//       function buildTable(data) {
-//         var table = document.getElementById("myTable");
-
-//         var row = `<tr>
-//                                   <td>${data[i].productName}</td>
-//                                   <td>${data[i].cateory}</td>
-//                                   <td>${data[i].quantity}</td>
-//                             </tr>`;
-//         table.innerHTML += row;
-//       }
-
-
-
-//     var myArray = [
-//     {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
-//     {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
-//     {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
-//     {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
-//     {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
-//     {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
-// ]
-
-// buildTable(myArray)
-
-
-
-// function buildTable(data){
-//     var table = document.getElementById('myTable')
-
-//     for (var i = 0; i < data.length; i++){
-//         var row = `<tr>
-//                         <td>${data[i].name}</td>
-//                         <td>${data[i].age}</td>
-//                         <td>${data[i].birthdate}</td>
-//                   </tr>`
-//         table.innerHTML += row
-
-
-//     }
-// }
 
 
     
