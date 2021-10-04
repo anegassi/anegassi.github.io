@@ -1,9 +1,9 @@
 
-    let libraryDB = [];
-
+   let libraryDB = [];
+ 
 
 function add(){
-    console.log("hello")
+    
     let productNameInput = document.getElementById("itemname").value;
         //itemList.productName=productNameInput;
        //libraryDB.push(productNameInput);
@@ -31,20 +31,49 @@ function add(){
 function buildTable(libraryDB){
     var table = document.getElementById("myTable");
     table.innerHTML="";
-    for (let i = 0; i < libraryDB.length; i++){
+    for (let i = 0, rowNum=1; i < libraryDB.length; i++,rowNum++){
         
-        row = `<tr>                    
+        row = `<tr>  
+                       <td>${rowNum}</td>                  
                         <td>${libraryDB[i].productName}</td>
                        <td>${libraryDB[i].category}</td>
                         <td>${libraryDB[i].quantity}</td>
                         <td>${libraryDB[i].ratings}</td>
-                        <td> <button type="button" class="btn btn-info" onclick="delet()">Delete</button><td/>
-                        <td> <button type="button" class="btn btn-info" onclick="edit()">update</button><td/>
-                  </tr>`
+                        <td> <button type="button" class="btn btn-info" onclick="delet('${rowNum}')">Delete</button><td/>
+                        <td> <button type="button" class="btn btn-info" onclick="edit('${rowNum}')">Update</button><td/>
+                        <td> <button type="button" class="btn btn-info" onclick="savechanges('${rowNum}')">Save</button><td/>
+                        </tr>`
     
         table.innerHTML += row;
     }
        
+}
+
+function delet(x){
+ //libraryDB= libraryDB.filter((obj,index,arr)=>{return arr.indexOf(obj)!=(x-1)})
+ libraryDB= libraryDB.filter((obj,index)=>{return index!=(x-1)})
+ buildTable(libraryDB);
+}
+
+function edit(x){
+    let editedObj= libraryDB.find((obj,index)=> { return index==(x-1)});
+      console.log(editedObj);
+      let productNameInput = document.getElementById("itemname");
+          productNameInput.value= editedObj.productName
+      let categoryInput = document.getElementById("itemcategory");
+          categoryInput.value=editedObj.category;
+      let quantityInput = +(document.getElementById("quantity"))
+          quantityInput.value=editedObj.quantity;
+    //let ratingInput= +(document.getElementById("ratings");
+          // ratingInput.=editedObj.ratings;
+    //libraryDB= libraryDB.filter((obj,index)=>{return index!=(x-1)})
+}
+
+function savechanges(x){
+    libraryDB= libraryDB.filter((obj,index)=>{return index!=(x-1)})
+    add()
+    
+
 }
 
 function sort(){
