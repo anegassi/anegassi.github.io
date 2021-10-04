@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div >p{
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <p>
+        NAME
+        <input name="inputElement" type="text" value=""/>
+        ID
+        <input id="new"type= "text" value=""/>
+        TYPE
+        <input type="text" value=""/>
+        <input type="radio" value="" />
+
+        <button onclick="submit()">Submit</button>
+     <div>
+         <p> Inside div P
+             <p>This P
+                 <p>Inner Most </p>
+             </p>
+         </p>
+         <p>sibling of p </p>
+     </div>
+    </p>
+    <script>
+        function submit(){
+            //  let ol= document.createElement("ol");
+            //  document.body.append(ol);
+             
+            //  let pelement= document.querySelectorAll("#new");   // id shoud be written with #
+            //  alert(pelement.length + pelement[0].type)
+            //  //  inside alert do not use "," instead use + 
+            //  // will print 1 text
+
+            //  let pelement1= document.querySelectorAll("input[type='radio']");
+            //  alert(pelement1.length + pelement1[0].type)
+            //  // prints 1radio
+
+            //  let pelement2= document.querySelectorAll("input[type='text']")
+            //  alert(pelement2.length + pelement2[0].type)
+            //  // prints 3text
+             
+            let element1= document.querySelectorAll("div")
+            console.log(element1)
+            
+             let element= document.querySelectorAll("div>p")/// isnt 
+             // isnt this supposed to have an array with only 3 element but the node has six
+             console.log(element);
+              alert(element.length + element[0].innerHTML);  // 5 Inside dive
+              for(let myDiv of element){
+                  alert(myDiv.innerHTML);
+                  // prints "Inside dive" , "This P", Inner Most,
+              }
+
+             // creat li, append to ol, li text should be the input text
+        }
+    </script>
+</body>
+</html>

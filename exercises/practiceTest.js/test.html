@@ -1,0 +1,46 @@
+
+<html> 
+    <head>
+        <style>
+        /* label[for='fruits']{
+            color:red;
+        } */
+        div label{
+            color:red;
+        }
+        </style>
+    </head> 
+    <body> 
+        <p>I am here</p>
+        <label for ="flowers">Flowers</label>
+        <ol> 
+            <li> Rose</li> 
+            <li>Chamalion</li> 
+        </ol> 
+        <div> 
+            <label for ="fruits">Fruits</label>
+            <ol> 
+                <li>Mango</li> 
+                <li>Pear</li> 
+            </ol>
+    </body>
+    <script>
+       let collect= document.querySelectorAll("ol >li")
+       console.log(collect)
+              for(let col of collect){
+                  col.style.textDecoration="underline"
+                }
+        //document.querySelector("label[for='fruits']").style.color="red"
+    
+        //document.querySelector("ol li").style.textDecoration="underline";
+        //document.querySelector("div ol li").style.textDecoration="underline";
+    
+        // document.querySelectorAll("ol li")[0].style.textDecoration="underline";
+        // document.querySelectorAll("ol li")[2].style.textDecoration="underline";
+    </script>
+    <html></html>  
+    
+    <!-- 1. Write Javascript code to underline all the first element of ol (Rose,Mango should be underlined)
+    2. a. Apply red color to the label, Fruits (Javascript)
+       b. Same as(a) with CSS -->
+     

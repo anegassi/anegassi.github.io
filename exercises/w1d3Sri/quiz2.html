@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>My Form</h1>
+    <p>All fields are required</p>
+    <label>First name:</label
+    ><input type="text" name="fname" value="Rama" /><br />
+    Last name: <input type="text" name="lname" value="Krishna" /> <br />
+    <input type="submit" value="Submit" onclick="submit()" />
+
+    <table id="sampleTable">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+    </table>
+
+    <script>
+      // alert first name and last name
+      function submit() {
+        let firstname = document.getElementsByName("fname")[0];
+        let lastname = document.getElementsByName("lname")[0];
+        // alwasy use if statement to check it satisfy the condition
+        if (lastname && lastname.length > 0) {
+          lastname = lastname[0];
+        }
+        alert(firstname.value + " " + lastname.value);
+        //  Rama Krishna
+        // change color of firstname
+        let labelTag = document.getElementsByTagName("label");
+        labelTag[0].style.color = "pink";
+        //write css rule for the same
+        // style label{ color: pink;} style
+
+        // change background color to red for h1 and p tags
+        //   let element = document.getElementsByTagName("h1");
+        //   element[0].style.color = "red";
+        //   let element1 = document.getElementsByTagName("p");
+        //   element1[0].style.color = "red";
+        let handP = document.querySelectorAll("h1,p");
+        for (let eachElement of handP) {
+          eachElement.style.backgroundColor = "red";
+
+          // change p content to "All fields are optional"
+          let p = document.getElementsByTagName("p")[0];
+          p.innerText = "All fields are optional";
+
+          // add "Do the following exercise" to the the text inside p tag(original+this new text)
+          //p.innerText = p.innerText + " Do the following exercise";
+          //p.append(" Do the following exercise");
+
+          // remove p from the html
+          //document.body.removechild(p);    // removes p from the html
+          //p.innerHTML="";                 // p is still there but is empty
+          // p.remove();                   // also removes p from the
+
+          // add image attachment to the html after lastname
+          let imageEl = document.createElement("img");
+          imageEl.src = "../images/habeshafood.jpeg";
+          imageEl.setAttribute = ("width", "240px");
+          imageEl.setAttribute = ("height", "160px");
+          imageEl.alt = "Image blocked";
+          document.body.append(imageEl);
+          document.body.prepend(imageEl);
+
+          //     append attches the tag at the end but is still the child of tag, similar to push in array
+          // where as prepend attaches the tag at the bigging of the tag and is still the child of the tag, similar to unshift in array
+
+          //  change second row pink
+          let tr = document.getElementsByTagName("tr")[1];
+          tr.style.color = "pink";
+          tr.style.backgroundColor = "green";
+        }
+      }
+    </script>
+  </body>
+</html>

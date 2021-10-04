@@ -1,0 +1,18 @@
+windows on load is uesful when we put the js file inside a header of anywhere in the body 
+where it is put before the full html page is rendered. since it will try to execute the js file 
+and the dom element objects that are called from js file will not work since theyare notfully loaded.
+ways to solve it
+1,use windows on load and put all the js fle inside the function handlre for wiindow.onload
+2, put all your js files inside functions that way when the js file is executed it doesnt 
+directly try to access the dom objects.
+3, unopbtrisive way of writing in the js file which is similar to number2
+can also prevent dom objects from getting accesed
+
+obtrusive  way means separating all the function calls and other js code from the html and
+putting it separately in js file
+
+collections could be thought of as array of objects.
+the following return collections
+element.getelementsbytag
+elements.hasChildNodes()
+

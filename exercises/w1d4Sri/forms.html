@@ -1,0 +1,155 @@
+<html>
+  <head> </head>
+
+  <body>
+    <input type="checkbox" name="checkboxName" value="lettuce" /> Lettuce
+    Vegetable​
+    <input type="checkbox" name="checkboxName" value="Tomato​" /> Tomato​
+    <input type="checkbox" name="checkboxName" value="Pickles​" /> Pickles​
+
+    <br />
+    <br />
+    <input type="radio" id="html" name="fav_language" value="HTML" />
+    <label for="html">HTML</label><br />
+    <input type="radio" id="css" name="fav_language" value="CSS" />
+    <label for="css">CSS</label><br />
+    <input
+      type="radio"
+      id="javascript"
+      name="fav_language"
+      value="JavaScript"
+    />
+    <label for="javascript">JavaScript</label>
+
+    <br />
+    <br />
+    <select name="favoritecharacter">
+      ​
+      <option>Jerry</option>
+      ​
+      <option>George</option>
+      ​
+      <option selected>Kramer</option>
+      ​
+      <option>Elaine</option>
+      ​
+    </select>
+
+    <br />
+    <br />
+    <select name="favoritecharacterMultiple" size="5" multiple>
+      ​
+      <option>Jerry</option>
+      ​
+      <option>George</option>
+      ​
+      <option>Kramer</option>
+      ​
+      <option selected>Elaine</option>
+      ​
+      <option selected>Newman</option>
+      ​
+    </select>
+    <br />
+    <br />
+    <select name="favoritecharacterOpt" multiple>
+      ​
+      <optgroup label="Major Characters">
+        ​
+        <option>Jerry</option>
+        ​
+        <option>George</option>
+        ​
+        <option>Kramer</option>
+        ​
+        <option>Elaine</option>
+        ​
+      </optgroup>
+      ​
+      <optgroup label="Minor Characters">
+        ​
+        <option>Newman</option>
+        ​
+        <option>Susan</option>
+        ​
+      </optgroup>
+      ​
+    </select>
+    <br />
+    <br />
+    <!-- <div id ="displaySelected"> </div> -->
+    <input type="text" id="myButton" value="My Button" />
+    <br />
+    <p>
+      <input type="button" onclick="add()" value="click me" />
+    </p>
+    <script>
+      function add() {
+        // let control = document.getElementsByName("checkboxName");
+        // console.log(control);
+        // let selected2 = [];
+        // for (let eachBox of control) {
+        //   if (eachBox.checked) {
+        //     selected2.push(eachBox.value);
+        //   }
+        // }
+        // alert(selected2);
+        // ///*************************////////////////
+        // let control2 = document.getElementsByName("fav_language");
+        // console.log(control2);
+        // let selected;
+        // for (let eachRadio of control2) {
+        //   if (eachRadio.checked) {
+        //     selected = eachRadio.value;
+        //   }
+        // }
+        // alert(selected);
+        // ////******************//////////
+        // let control3 = document.getElementsByName("favoritecharacter");
+        // console.log(control3[0]);
+        // console.log(control3);
+        // for (let sel of control3) {
+        //   console.log(sel[2].selected, sel.value);
+        //   alert(sel[2].selected + sel.value);
+        // }
+
+        // ////sel.value is the value of the select tag but sel.selected is undefined because it is not the one th
+        // //that is selected rather the options so you have to do an array to find the selected option
+        // //////************************///////////////
+        // let control4 = document.getElementsByName("favoritecharacterMultiple");
+        // console.log(control4[0]);
+        // console.log(control4);
+        // getSelectValues(control4[0]);
+
+        ///////***********************/////////////
+        let control5 = document.getElementsByName("favoritecharacterOpt");
+        console.log(control5[0]);
+        getSelectValues(control5[0]);
+
+        // for (let sel of control5) {
+        //   console.log(sel.selected, sel.value);
+        // }
+        // let label = document.getElementById("myButton");
+        // label.value = selected;
+      }
+
+      // select is an HTML select element
+      function getSelectValues(select) {
+        var result = [];
+        console.log(select.options);
+        var options = select && select.options;
+        console.log(select && select.options);
+        console.log(select);
+        console.log(options);
+        var opt;
+        for (var i = 0, iLen = options.length; i < iLen; i++) {
+          opt = options[i];
+          if (opt.selected) {
+            result.push(opt.value || opt.text);
+          }
+        }
+        alert(result);
+      }
+    </script>
+  </body>
+</html>
