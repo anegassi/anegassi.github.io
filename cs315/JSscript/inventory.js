@@ -62,7 +62,7 @@ function edit(x){
           productNameInput.value= editedObj.productName
       let categoryInput = document.getElementById("itemcategory");
           categoryInput.value=editedObj.category;
-      let quantityInput = +(document.getElementById("quantity"))
+      let quantityInput = document.getElementById("quantity")
           quantityInput.value=editedObj.quantity;
     //let ratingInput= +(document.getElementById("ratings");
           // ratingInput.=editedObj.ratings;
