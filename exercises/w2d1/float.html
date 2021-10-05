@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      /*  the above is a pseudo-class that clears both left ans right, works same as the below  */
+      /* .wrapper {
+        /*   overflow: auto;    */
+      /* display: flow-root;
+      }    /*  wrapper to clear the floats,allow us to give space and not to allow other sentences comes in b/n the images
+      inside the free space of div.*/
+
+      .inside {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img
+        src="../../cs315/images/picture1.jpg"
+        width="300px"
+        style="float: left; margin-right: 10px"
+      />
+      <!-- margin-right property will give the image space from the sentences written in between 
+    so they donot hide the words under the images-->
+      <img
+        src="../../cs315/images/picture1.jpg"
+        width="300px"
+        style="float: right; margin-right: 10px"
+      />
+      <div class="inside">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate
+        temporibus rem in debitis perferendis repellendus accusantium nulla
+        esse, aut qui magnam, eos quod enim!
+      </div>
+    </div>
+
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, accusantium
+    aut impedit voluptates possimus doloremque voluptate. Est non inventore
+    nostrum, nisi veniam assumenda blanditiis dolorem. Nobis quaerat inventore
+    soluta quia.
+  </body>
+</html>

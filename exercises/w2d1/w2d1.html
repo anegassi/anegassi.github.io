@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 2000px;
+        padding: 20px;
+        padding-left: 20px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        background-image: url("../../cs315/images/felafelmezas.jpeg");
+        background-repeat: repeat-y;
+        background-color: burlywood;
+      }
+      .inside {
+        padding: 20px;
+        padding-left: 20px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        background-image: url("../../cs315/images/felafelmezas.jpeg");
+      }
+      .pic{
+          width: 2000px;
+          height: 400px;
+          margin-top: 20px;
+          margin-bottom: 40px;
+          margin-left: 30px;
+          padding-left: 20 px;
+          padding-right: 20px;
+          background-image: url("../../cs315/images/ocean.mp4");
+          
+      }
+      .last{
+          width: 300px;
+          height: 200px;
+          margin-top: 30px;
+          margin-bottom: 40px;
+          margin-left: 40px;
+          border: 10px solid green;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- for block elements width and height can be applied  -->
+    <div>
+      First line inside div
+      <p>First line inside p</p>
+      <p class="box">Inside p class box</p>
+      <p>Second line inside p</p>
+    </div>
+    <!-- Nested boxes-->
+    <div class="pic">
+        One
+            <div style="border: 1px solid blue ">
+            content inside 2nd div</div>
+        </p>
+
+
+    </div>
+    <!-- for inline elements width and height is not given or doesnot apply  -->
+    <!-- only left and right padding and left and right margins apply for inline elements-->
+    <!-- where as the top and bottom padding and margins does not apply to inline elements-->
+     <!--  
+        width and height have effect on block level eg div and take the entire horizontal space,
+        where as inline elements ignore the width and height rule and do not take the entire horizontal space
+        but if you want to apply the width & height we can use {display : inline-block;}
+    -->
+    <div>
+      hello
+      <p>Before label</p>
+      <label class="inside"> Box inside label </label>
+      <p>After label</p>
+    </div>
+    <div class="last">
+        Line
+        <img src="../../cs315/images/felafelmezas.jpeg" style="max-width:100px; float: right;"/>
+    <!-- "max-width: 100px" property makes the image to fit properly or exactly inside the desired box with out overflowing -->
+    </div>
+  </body>
+</html>

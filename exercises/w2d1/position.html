@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <script>
+      console.log(document.querySelector("*"));
+    </script>
+    <style>
+      body {
+        border: 2px solid black;
+        position: relative;
+        height: 2800px;
+        margin: 30px;
+      }
+      .box {
+        border: 2px solid green;
+        width: 50px;
+        height: 50px;
+        background-color: green;
+      }
+      .box2 {
+        border: 2px solid orange;
+        width: 50px;
+        height: 50px;
+        right: 100px;
+        top: 0px;
+        left: 90px;
+        bottom: 40px;
+        background-color: orange;
+        position: sticky;
+        float: left;
+        bottom: 40px;
+      }
+      .someClass {
+        color: red;
+      }
+      p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position fixed means the position is fixed and it counts from /is related to/  the document only 
+        when scrolling it will not chage position but it will stay on the window/visual screen/ since its releated to the document.-->
+    <!-- relative position means an element’s original position remains in the flow of the document,
+           left/right/top/bottom/z-index will work but is stays in one position when scrolling doesnt change position-->
+    <!-- static position means does not move even though we applyied right and top it does not move,
+      every element has a static position by default refenece the body.top,right,bottom &left does not apply, 
+        so the element will stick to the normal page flow. So if there is a left/right/top/bottom/z-index set
+         then there will be no effect on that element-->
+    <!--  absolute positioning,position the element relative to the document or parent element. 
+      if you want to make it relative to the parent element, the parent element should have position property with value "relative".
+      if its relative to the document then when srolling does not change position.
+      element is removed from the flow of the document and 
+            other elements will behave as if it’s not even there whilst all the other
+             positional properties will work on it. To make the child element positioned
+              absolutely from its parent element we need to set this on the parent element itself:-->
+    <!-- sticky position  the element is treated like a relative value until the scroll location 
+      of the viewport reaches a specified threshold, at which point the element takes a fixed 
+      position where it is told to stick. better exlpain with "top:0px" style  -->
+
+    <!-- inheritance-->
+    <!-- if position:inherit is applied then the child will inherit the property position with value from the parent exept margin and padding-->
+
+    <div class="box"></div>
+    <div class="box2"></div>
+    div > p
+    <div
+      class="inheritDemo"
+      style="text-align: center; border: 1px solid; padding: 20px"
+    >
+      Some Content
+      <div
+        class="innerDiv"
+        style="text-align: left; border: 1px solid; padding: 20px"
+      >
+        <p>Some other Content</p>
+      </div>
+    </div>
+    <p class="someClass">SOme Style</p>
+    <p>Without class</p>
+
+    <!-- inner elements inherit property from their parents unless they overide them with their own properties-->
+    <!-- inherited properties does not include padding and margin from their parents-->
+
+    <div
+      class="secondinheritDemo"
+      style="text-align: center; border: 1px solid; padding: 30px"
+    >
+      Some Content
+      <div
+        class="secondinnerDiv"
+        style="border-style: dotted solid dashed double; padding: 10px"
+      >
+        <p>Some other Content</p>
+      </div>
+    </div>
+    <!-- (div p)  is a selection than includes all childrens and descendents of div-->
+    <!-- ( div >p) is a selection than selects only direct p children of div-->
+  </body>
+</html>

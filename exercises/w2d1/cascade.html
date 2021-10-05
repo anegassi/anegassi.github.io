@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p,
+      h1,
+      h2 {
+        color: green;
+        background-color: grey;
+      }
+      h2 {
+        background-color: blue;
+      }
+      div {
+        font-size: 30px;
+        color: orange;
+      }
+      .some {
+        color: blueviolet;
+      }
+      .someclass {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cascading is order od CSS matters, if have equal specificity then the one that comes 
+    last is the one that is used-->
+    <h1>h1 background-color</h1>
+    <h2>h2 background-color is blue</h2>
+    <p>paragraph background-color is grey</p>
+    <div class="some">
+      First line
+      <div>Second line</div>
+    </div>
+    <div class="some">Second line inside 2nd div</div>
+    <p class="someclass">p with class special</p>
+    <!-- -->
+  </body>
+</html>
