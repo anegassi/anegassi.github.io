@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" href="cs315/css/navbar.css" />
     <style>
       body {
         background-color: lightgray;
@@ -19,37 +20,69 @@
         border: 1px solid yellow;
         padding: 10px;
         float: right;
-        width: 20%;
+        width: 30%;
       }
+
       .firstPage {
         background-color: white;
-        border: 1px solid blue;
+        /*border: 1px solid blue;*/
+        font-size: 18px;
       }
-      .imageBox {
+
+      .search {
+        height: 10px;
+      }
+      .imageBox::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      .imageBox img {
+        margin: 10px;
         width: 35%;
+        height: 20%;
         float: left;
+      }
+      .underline {
+        border-bottom: 3px solid black;
       }
     </style>
   </head>
 
   <body>
+    <header>
+      <h1>Bidhan Tech Blog</h1>
+      <p>An example technology Blog</p>
+      <nav>
+        <ul>
+          <li><a href=""></a>HOME</li>
+          <li><a href=""></a>RECENT POSTS</li>
+          <li><a href=""></a> BLOG</li>
+          <li><a href=""></a> ABOUT ME</li>
+          <li><a href=""></a> CONTACT ME</li>
+        </ul>
+      </nav>
+    </header>
     <div class="mainDiv">
       <div class="articleDiv">
         <div class="firstPage">
           <h1>An example Post #3</h1>
           <div class="imageBox">
-            <img
-              src="cs315/images/habeshafood.jpeg"
-              alt=""
-              style="max-width: 100%"
-            />
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-            quod maxime odit, eligendi itaque sunt numquam repellat, porro
-            neque, atque tenetur! Illo molestias obcaecati accusantium amet
-            pariatur explicabo quos magni mollitia necessitatibus labore,
-            officia qui in consequatur. Non, iste aut!
+            <p>By: Aradom Negaasi Date oct6,2021 Catagory:tour</p>
+            <img src="cs315/images/greekcity.jpg" alt="" />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            distinctio accusamus necessitatibus placeat corporis unde nam
+            similique. Qui illum sunt atque nobis dignissimos voluptate
+            architecto quasi obcaecati asperiores dolorem adipisci neque aliquid
+            impedit, iure pariatur soluta nemo deserunt nulla quibusdam, libero
+            error. Corrupti neque laboriosam blanditiis, in, porro earum qui
+            voluptate velit quae odio asperiores illo praesentium nam quisquam
+            quis itaque? Error non laudantium deleniti optio praesentium beatae
+            ab, expedita tenetur accusamus explicabo porro vero natus? Obcaecati
+            ipsa doloremque nihil quos animi ullam saepe quia blanditiis
+            laboriosam? Neque atque porro nesciunt magnam. Sunt nihil
+            consectetur consequuntur vitae tempore, deleniti earum!
           </div>
-
           <a
             href="https://greeking.me/tours/29-best-of-athens-acropolis-and-city-tour"
           >
@@ -74,20 +107,22 @@
         <div class="firstPage">
           <h1>An example Post #3</h1>
           <div class="imageBox">
-            <img
-              src="cs315/images/habeshafood.jpeg"
-              alt=""
-              style="max-width: 100%"
-            />
+            <p>By: Aradom Negaasi Date oct6,2021 Catagory:tour</p>
+            <img src="cs315/images/greekcity.jpg" alt="" />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            distinctio accusamus necessitatibus placeat corporis unde nam
+            similique. Qui illum sunt atque nobis dignissimos voluptate
+            architecto quasi obcaecati asperiores dolorem adipisci neque aliquid
+            impedit, iure pariatur soluta nemo deserunt nulla quibusdam, libero
+            error. Corrupti neque laboriosam blanditiis, in, porro earum qui
+            voluptate velit quae odio asperiores illo praesentium nam quisquam
+            quis itaque? Error non laudantium deleniti optio praesentium beatae
+            ab, expedita tenetur accusamus explicabo porro vero natus? Obcaecati
+            ipsa doloremque nihil quos animi ullam saepe quia blanditiis
+            laboriosam? Neque atque porro nesciunt magnam. Sunt nihil
+            consectetur consequuntur vitae tempore, deleniti earum!
           </div>
 
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-            quod maxime odit, eligendi itaque sunt numquam repellat, porro
-            neque, atque tenetur! Illo molestias obcaecati accusantium amet
-            pariatur explicabo quos magni mollitia necessitatibus labore,
-            officia qui in consequatur. Non, iste aut!
-          </p>
           <a
             href="https://greeking.me/tours/29-best-of-athens-acropolis-and-city-tour"
           >
@@ -96,8 +131,35 @@
         </div>
       </div>
       <div class="sidebar">
-        <div class="firstPage">Some Content</div>
-        <div class="firstPage">Some Other Content</div>
+        <div class="firstPage">
+          <h2 class="underline">Search</h2>
+          <input type="search" />
+          <button type="button">Search</button>
+        </div>
+        <div class="firstPage">
+          <h2 class="underline">Recent Posts</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="firstPage">
+          <h2 class="underline">Pages</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="firstPage">
+          <h2 class="underline">Categories</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="firstPage">
+          <h2 class="underline">Recent Posts</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
       </div>
     </div>
   </body>
