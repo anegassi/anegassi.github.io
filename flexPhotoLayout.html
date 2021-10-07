@@ -18,77 +18,99 @@
         height: 150px;
         width: 150px;
       }
+      img{
+        height: 150px;
+        width: 150px;
+        /*max-width: 100%;
+        object-fit: fill;
+        overflow: auto;*/
+      }
+      .firstrow, .secondrow,.thirdrow{
+          display: flex;
+          flex-flow: row;
+          flex:0 1 100%;
+          
+      }
+      .pic1,.pic2,.pic3,.pic4,.pic5{
+          flex: 1 1 auto;
+      }
+      .pic6{
+        flex: 0 1 auto;
+      }
+      .pic7{
+        flex: 3 1 auto;
+      }
+      .pic8{
+        flex: 1 1 auto;
+      }
+      .pic9{
+        flex: 0 1 auto;
+      }
+
+
+      .pic10{
+        flex: 0 1 auto;
+      }
+      .pic11{
+        flex: 2 1 auto;
+      }
+      .pic12{
+        flex: 0 1 auto;
+      }
+      .pic13{
+        flex: 1 1 auto;
+      }
+      
+      
     </style>
   </head>
   <body>
-    <h1>Photo Layout</h1>
+    <h1sy>Photo Layout</h1>
     <div class="main">
-      <div class="box pic1">
-        <img
-          src="cs315/images/citypicture.jpg"
-          style="max-width: 100%"
-          alt=""
-        />
+      <div class="firstrow">
+          <div class="box pic1">
+            <img src="cs315/images/citypicture.jpg"alt=""/>
+          </div>
+          <div class="box pic2">
+            <img src="cs315/images/felafelmezas.jpeg" alt=""/>
+          </div>
+          <div class="box pic3">
+            <img src="cs315/images/greekcity.jpg"  alt="" />
+          </div>
+          <div class="box pic4">
+            <img  src="cs315/images/habeshafood.jpeg" alt="" />
+          </div>
+          <div class="box pic5">
+            <img src="cs315/images/mountainpic.jpg" alt="" />
+          </div>
       </div>
-      <div class="box pic2">
-        <img
-          src="cs315/images/felafelmezas.jpeg"
-          style="max-width: 100%"
-          alt=""
-        />
+      <div class="secondrow">
+          <div class="box pic6">
+            <img src="cs315/images/ocean.mp4"  alt="" />
+          </div>
+          <div class="box pic7">
+            <img src="cs315/images/picture1.jpg" alt="" />
+          </div>
+          <div class="box pic8">
+            <img src="cs315/images/roadside.jpg"  alt="" />
+          </div>
+          <div class="box pic9">
+            <img src="cs315/images/citypicture.jpg" alt="" />
+          </div>
       </div>
-      <div class="box pic3">
-        <img src="cs315/images/greekcity.jpg" style="max-width: 100%" alt="" />
-      </div>
-      <div class="box pic4">
-        <img
-          src="cs315/images/habeshafood.jpeg"
-          style="max-width: 100%"
-          alt=""
-        />
-      </div>
-      <div class="box pic5">
-        <img
-          src="cs315/images/mountainpic.jpg"
-          style="max-width: 100%"
-          alt=""
-        />
-      </div>
-      <div class="box pic6">
-        <img src="cs315/images/ocean.mp4" style="max-width: 100%" alt="" />
-      </div>
-      <div class="box pic7">
-        <img src="cs315/images/picture1.jpg" style="max-width: 100%" alt="" />
-      </div>
-      <div class="box pic8">
-        <img src="cs315/images/roadside.jpg" style="max-width: 100%" alt="" />
-      </div>
-      <div class="box pic9">
-        <img
-          src="cs315/images/citypicture.jpg"
-          style="max-width: 100%"
-          alt=""
-        />
-      </div>
-      <div class="box pic10">
-        <img
-          src="cs315/images/felafelmezas.jpeg"
-          style="max-width: 100%"
-          alt=""
-        />
-      </div>
-      <div class="box pic11">
-        <img src="cs315/images/greekcity.jpg" style="max-width: 100%" alt="" />
-      </div>
-      <div class="box pic12">
-        <img
-          src="cs315/images/habeshafood.jpeg"
-          style="max-width: 100%"
-          alt=""
-        />
-      </div>
-      <div class="box pic13">
-        <img src="cs315/images/ocean.mp4" style="max-width: 100%" alt="" />
+      <div class="thirdrow">
+          <div class="box pic10">
+            <img src="cs315/images/felafelmezas.jpeg"  alt="" />
+          </div>
+          <div class="box pic11">
+            <img src="cs315/images/greekcity.jpg" alt="" />
+          </div>
+          <div class="box pic12">
+            <img src="cs315/images/habeshafood.jpeg" alt="" />
+          </div>
+          <div class="box pic13">
+            <img src="cs315/images/ocean.mp4" alt="" />
+          </div>
       </div>
     </div>
   </body>
