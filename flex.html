@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mainDiv {
+        display: flex;
+        flex: row;
+        width: 100%;
+        height: 500px;
+        column-gap: 2%;
+        padding: 25px;
+      }
+      .innerDiv1 {
+        width: 25%;
+        height: 98%;
+        padding: 20px;
+        background-color: cyan;
+      }
+      .innerDiv2 {
+        width: 25%;
+        height: 98%;
+        padding: 20px;
+        background-color: cyan;
+      }
+      .innerDiv {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 98%;
+        padding: 20px;
+        background-color: cyan;
+      }
+      .innerBox {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 2%;
+        margin-top: 10px;
+      }
+      .box {
+        flex: 1 1 auto;
+        /*width: 23%;*/
+        height: 95%;
+        padding: 8%px 6px 2px 6px;
+        background-color: white;
+        margin: 6px 6px 0px 6px;
+      }
+      .wrapper {
+        flex: 0 1 auto;
+        /*width: 90%;*/
+        height: 10%;
+        padding: 2px;
+        margin: 2% 3% 2% 3%;
+        text-align: center;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="margin-left: 30%">Nested Flex Items</h2>
+    <div class="mainDiv">
+      <div class="innerDiv1">
+        <h2>First Article</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
+          provident praesentium voluptas dolore non corporis ipsum! Quas iure a
+          consequuntur, mollitia placeat aut ad deserunt culpa neque at soluta
+          illum quod porro nulla eos fuga distinctio provident omnis dolores
+          quibusdam natus voluptates? Perferendis quis repudiandae modi aut,
+          voluptate, totam cum consectetur tempora neque labore fugit
+          laboriosam. Voluptas ullam in quo non nisi facere alias quibusdam
+          nostrum fugit molestiae, dicta beatae reiciendis perferendis assumenda
+          nulla error optio modi. Nostrum inventore perspiciatis exercitationem
+          esse mollitia veniam sed facere tempora suscipit autem quibusdam,
+          incidunt illum quos assumenda ullam velit rem perferendis eos deserunt
+          ipsam voluptas quis. Hic, explicabo voluptate? Natus sed unde corrupti
+          totam! Eum non molestiae delectus corporis animi, voluptatibus
+          veritatis repellat rem placeat consectetur distinctio autem deleniti.
+          Dolores quis, ipsum repellendus nesciunt dolore velit rem natus quia
+          illo placeat omnis repudiandae laudantium commodi nostrum facilis
+          minus, nihil aliquid quos. Labore, culpa.
+        </p>
+      </div>
+      <div class="innerDiv2">
+        <h2>Second Articel</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis,
+          laudantium tempora dolorem beatae fuga quibusdam provident asperiores
+          qui deserunt atque voluptatem cum optio sapiente, magni, sunt labore
+          blanditiis. Nulla maiores suscipit libero perferendis reprehenderit
+          veritatis error. Optio asperiores explicabo illum sunt rerum magni
+          tenetur odio excepturi unde consequuntur dolorem laboriosam accusamus
+          eligendi odit modi eaque sint voluptates quidem voluptatum, animi
+          minus aliquam quisquam! Beatae sint tenetur accusantium laboriosam
+          facilis illum sapiente numquam possimus voluptatem optio, magnam
+          voluptate ut esse laborum vitae iste itaque voluptatibus eos nisi
+          veniam ipsa nihil? Accusantium eius omnis dicta nulla doloribus
+          distinctio iure commodi illum cum. Exercitationem omnis quos amet
+          accusamus iure harum veniam repudiandae perferendis hic consectetur
+          necessitatibus earum ab, assumenda et quas, sed excepturi iste
+          provident odio eaque voluptas nostrum inventore praesentium! Modi
+          voluptatem corrupti ea excepturi quam nesciunt est facilis quod. Nemo,
+          facilis.
+        </p>
+      </div>
+      <div class="innerDiv">
+        <div class="innerBox">
+          <button class="box">Smile</button>
+          <button class="box">Laugh</button>
+          <button class="box">Wink</button>
+          <button class="box">Shrug</button>
+        </div>
+        <button class="wrapper">Blush</button>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          voluptate recusandae quo dignissimos odio veniam quaerat aliquam quae
+          ipsam non nihil voluptatum deleniti officia quia neque facere soluta,
+          voluptatibus officiis repellat porro unde. Ullam magni nemo corporis
+          architecto unde laboriosam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          dolore vero, architecto, voluptas ad et vitae odit consectetur dolorum
+          a qui adipisci est perspiciatis numquam alias odio explicabo ex.
+          Perferendis tempora id amet sapiente ea eaque aliquam earum quae
+          quaerat.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
