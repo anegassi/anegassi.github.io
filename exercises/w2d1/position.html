@@ -41,7 +41,11 @@
     <!-- fixed position means the position is fixed and it counts from /is related to/  the window(view) only 
         when scrolling it will not chage position but it will stay on the window/visual screen/ since its releated to the window.-->
     <!-- relative position, you can move the element relative to its original position with in the container, means an element’s original position remains in the flow of the document,
-           left/right/top/bottom/z-index will work but is stays in one position when scrolling doesnt change position-->
+        relative position offsets the element visualy from its original position, but
+        it never removes the element from the document, thats why sometimes the offset(relative)
+        element can overlap other documetns visually but its original space will not be replaced
+        by other   
+      left/right/top/bottom/z-index will work but is stays in one position when scrolling doesnt change position-->
     <!-- static position means does not move even though we applyied right and top it does not move,
       every element has a static position by default refenece the body.top,right,bottom &left does not apply, 
         so the element will stick to the normal page flow. So if there is a left/right/top/bottom/z-index set
@@ -49,6 +53,11 @@
     <!--  absolute positioning,position the element relative to the container or parent element. 
       if you want to make it relative to the parent element, the parent element should have position property with value "relative".
       the element is removed from the flow of its original container and is not part of the container or parent anymore.
+      if you dont put the parent element as relatiove then the absolute positioned element
+      will consider the body or the window as a means of referance or relative
+
+      if we do absoulte. the parent container will rearrange and display its content
+      as if  the abosulte is no more part of it
       -->
     <!-- sticky position  the element is treated like a relative value until the scroll location 
       of the viewport reaches a specified threshold, at which point the element takes a fixed 
