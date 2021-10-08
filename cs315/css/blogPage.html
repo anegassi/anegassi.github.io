@@ -6,138 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .mainDiv {
-        display: flex;
-        flex: row;
-        width: 100%;
-        height: 500px;
-        column-gap: 2%;
-        padding: 25px;
-      }
-      .innerDiv1 {
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 20%;
-        /*width: 25%;*/ /*instead of width we applied flex item the base property
-        so it gets bigger and smaller acording to the shrink and grow property when we adjust
-        the screen to different proportion*/
-        height: 98%;
-        padding: 20px;
-        background-color: cyan;
-      }
-      .innerDiv2 {
-        /*width: 25%;*/
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 20%;
-        height: 98%;
-        padding: 20px;
-        background-color: cyan;
-      }
-      .innerDiv {
-        display: flex;
-        flex-direction: column;
-        flex: 3 1 20%;
-        /*width: 40%;*/
-        height: 98%;
-        padding: 20px;
-        background-color: cyan;
-      }
-      .innerBox {
+      .main {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 2%;
-        margin-top: 10px;
-        flex: 0 1 20%;
+        width: 70%;
+        height: 60%;
+        background-color: blue;
+        margin: 50px 50px;
       }
-      .innerDiv p {
-        flex: 0 1 auto; /*
-        auto in this case means the default size of p blocks if we do it 20%
-        it is goingg to have a space of 20% of innerDiv container
-        for this reason you observe simple line texts and a lot of blank space to make up the 20%*/
+      .box {
+        height: 150px;
+        width: 150px;
       }
-      .smile {
-        flex: 0 1 20%;
-        /* when we say 20% the height and width of the original eleement is overriden
-        by the flex base property . and the flex base is default strecth regardless their size
-        , so it will stretch the elements in their length and width to make up the 20% 
-        space of its container
-        to fix this you can use align-items and align contenet to brin them to specific size
-        but if you set the items some specific length it will always consider it when we use align item*/
+      img{
+        height: 150px;
+        width: 150px;
+        /*max-width: 100%;
+        object-fit: fill;
+        overflow: auto;*/
       }
-      .laugh {
-        flex: 0 1 20%;
+      .firstrow, .secondrow,.thirdrow{
+          display: flex;
+          flex-flow: row;
+          flex:0 1 100%;
+          
       }
-      .wink {
-        flex: 0 1 20%;
+      .pic1,.pic2,.pic3,.pic4,.pic5{
+          flex: 1 1 auto;
       }
-      .shrug {
-        flex: 0 1 20%;
+      .pic6{
+        flex: 0 1 auto;
       }
-      .blush {
-        flex: 4 1 20%;
-        align-self: center;
+      .pic7{
+        flex: 3 1 auto;
       }
+      .pic8{
+        flex: 1 1 auto;
+      }
+      .pic9{
+        flex: 0 1 auto;
+      }
+
+
+      .pic10{
+        flex: 0 1 auto;
+      }
+      .pic11{
+        flex: 2 1 auto;
+      }
+      .pic12{
+        flex: 0 1 auto;
+      }
+      .pic13{
+        flex: 1 1 auto;
+      }
+      
+      
     </style>
   </head>
   <body>
-    <h2 style="margin-left: 30%">Nested Flex Items</h2>
-    <div class="mainDiv">
-      <div class="innerDiv1">
-        <h2>First Article</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-          provident praesentium voluptas dolore non corporis ipsum! Quas iure a
-          consequuntur, mollitia placeat aut ad deserunt culpa neque at soluta
-          illum quod porro nulla eos fuga distinctio provident omnis dolores
-          quibusdam natus voluptates? Perferendis quis repudiandae modi aut,
-          voluptate, totam cum consectetur tempora neque labore fugit
-          laboriosam. Voluptas ullam in quo non nisi facere alias quibusdam
-          nostrum fugit molestiae, dicta beatae reiciendis perferendis assumenda
-          nulla error optio modi. Nostrum inventore perspiciatis exercitationem
-          esse mollitia veniam sed facere tempora suscipit autem quibusdam,
-        </p>
+    <h1sy>Photo Layout</h1>
+    <div class="main">
+      <div class="firstrow">
+          <div class="box pic1">
+            <img src="cs315/images/citypicture.jpg"alt=""/>
+          </div>
+          <div class="box pic2">
+            <img src="cs315/images/felafelmezas.jpeg" alt=""/>
+          </div>
+          <div class="box pic3">
+            <img src="cs315/images/greekcity.jpg"  alt="" />
+          </div>
+          <div class="box pic4">
+            <img  src="cs315/images/habeshafood.jpeg" alt="" />
+          </div>
+          <div class="box pic5">
+            <img src="cs315/images/mountainpic.jpg" alt="" />
+          </div>
       </div>
-      <div class="innerDiv2">
-        <h2>Second Articel</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis,
-          laudantium tempora dolorem beatae fuga quibusdam provident asperiores
-          qui deserunt atque voluptatem cum optio sapiente, magni, sunt labore
-          blanditiis. Nulla maiores suscipit libero perferendis reprehenderit
-          veritatis error. Optio asperiores explicabo illum sunt rerum magni
-          tenetur odio excepturi unde consequuntur dolorem laboriosam accusamus
-          eligendi odit modi eaque sint voluptates quidem voluptatum, animi
-          minus aliquam quisquam! Beatae sint tenetur accusantium laboriosam
-          facilis illum sapiente numquam possimus voluptatem optio, magnam
-          voluptate ut esse laborum vitae iste itaque voluptatibus eos nisi
-        </p>
+      <div class="secondrow">
+          <div class="box pic6">
+            <img src="cs315/images/ocean.mp4"  alt="" />
+          </div>
+          <div class="box pic7">
+            <img src="cs315/images/picture1.jpg" alt="" />
+          </div>
+          <div class="box pic8">
+            <img src="cs315/images/roadside.jpg"  alt="" />
+          </div>
+          <div class="box pic9">
+            <img src="cs315/images/citypicture.jpg" alt="" />
+          </div>
       </div>
-      <div class="innerDiv">
-        <div class="innerBox">
-          <button class="box smile">Smile</button>
-          <button class="box laugh">Laugh</button>
-          <button class="box wink">Wink</button>
-          <button class="box shrug">Shrug</button>
-          <button class="box blush">Blush</button>
-        </div>
-
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          voluptate recusandae quo dignissimos odio veniam quaerat aliquam quae
-          ipsam non nihil voluptatum deleniti officia quia neque facere soluta,
-          voluptatibus officiis repellat porro unde. Ullam magni nemo corporis
-          architecto unde laboriosam.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          dolore vero, architecto, voluptas ad et vitae odit consectetur dolorum
-          a qui adipisci est perspiciatis numquam alias odio explicabo ex.
-          Perferendis tempora id amet sapiente ea eaque aliquam earum quae
-          quaerat.
-        </p>
+      <div class="thirdrow">
+          <div class="box pic10">
+            <img src="cs315/images/felafelmezas.jpeg"  alt="" />
+          </div>
+          <div class="box pic11">
+            <img src="cs315/images/greekcity.jpg" alt="" />
+          </div>
+          <div class="box pic12">
+            <img src="cs315/images/habeshafood.jpeg" alt="" />
+          </div>
+          <div class="box pic13">
+            <img src="cs315/images/ocean.mp4" alt="" />
+          </div>
       </div>
     </div>
   </body>
