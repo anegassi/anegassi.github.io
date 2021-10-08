@@ -19,11 +19,11 @@
         width: 150px;
       }
       img{
-        height: 150px;
-        width: 150px;
-        /*max-width: 100%;
-        object-fit: fill;
-        overflow: auto;*/
+        
+        max-width: 100%; /*max width, the container gets larger in width to put the image inside*/
+        object-fit: contain;/*this will minimize the image so it goes inside the container. but might not fill the size of the container*/
+        object-fit:cover;/*it acts like a background the image can get cropped*/
+       
       }
       .firstrow, .secondrow,.thirdrow{
           display: flex;

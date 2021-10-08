@@ -9,21 +9,30 @@
   <style>
     .imgNew {
       color: white;
-      width: 20px;
-      object-fit: contain;
+      width: 20px; /*this is for the middleColumngrid the 1st coulmn size is 20px so we only need to specify the width*/
+      object-fit: contain; /*contain is coz the image is inside a  grid cell*/
       margin-top: 15px;
     }
 
     .imgClass {
       width: 40%;
-      object-fit: contain;
+      object-fit: contain; /*we have to know how this images are inserted inside the div*/
     }
 
     footer {
       display: flex;
       width: 70%;
-      background-color: black;
-      flex-direction: column;
+      background-color: black; /*the color is for the conetnt, border and padding */
+      flex-direction: column; /*by defualt the items are strecthed to fill the width of the size of the container
+      and the hright of the items inside of the container willbe determined by theeir content
+      unless you give specific width and height of the items inside the container using
+      1, flex max min base
+      2 set height and width 
+      3, if you dont give it it will take the size of the contents
+     
+     
+     in genreal unless we put widht and height all elemnets will eb stretched to fill their container */
+
       padding: 50px 100px;
     }
 
