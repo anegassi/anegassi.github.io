@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    xs md lg xl xxl
+    <div class="container">
+      <div class="row">
+        <div class="col" style="border: 1px solid red">Column</div>
+
+        <!--if you go anynumber less than the breakpoint for any of the responsive design variables
+        like the sm s lg md. the column specified with any of those variabless will go full width
+    if the screen is reduced below th breakpoints.-->
+        <!--
+        the width of the columns is maintained with in the range of the responsive variable
+        breakpoints unless you have big contents inside your columns, then it will
+        oversee the variables breakpoint and the columns can break
+    -->
+
+        <div class="col" style="border: 1px solid red">Column</div>
+        <div class="col" style="border: 1px solid red">Column</div>
+      </div>
+    </div>
+    <div class="container">
+      <!--this 12 columns will still be there because
+    1, there content is small
+    2, if we dont specify any distince responsvie variable by dfaul it is extra small
+     and in extra small you still can have 12 columns unless th content is big, if the 
+    content is big they will push eacother  -->
+      <div class="row">
+        <div class="col" style="border: 1px solid blue">A</div>
+        <div class="col" style="border: 1px solid blue">B</div>
+        <div class="col" style="border: 1px solid blue">C</div>
+        <div class="col" style="border: 1px solid blue">D</div>
+        <div class="col" style="border: 1px solid blue">E</div>
+        <div class="col" style="border: 1px solid blue">F</div>
+        <div class="col" style="border: 1px solid blue">G</div>
+        <div class="col" style="border: 1px solid blue">H</div>
+        <div class="col" style="border: 1px solid blue">I</div>
+        <div class="col" style="border: 1px solid blue">J</div>
+        <div class="col" style="border: 1px solid blue">K</div>
+        <div class="col" style="border: 1px solid blue">L</div>
+      </div>
+    </div>
+    <!--in this both example even though there is no responsive detail, becuase the contetn is big you will see
+    the divs stacking up when the screen becomes small. -->
+    <div class="container">
+      <div class="row">
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="col" style="border: 1px solid blue">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md" style="border: 1px solid green">Column1</div>
+        <!-- when we write col-md the column will occupay the whole width of the screen when we
+            take the screen size below 768px . -->
+        <div class="col" style="border: 1px solid green">Column2</div>
+        <div class="col-sm" style="border: 1px solid green">Column3</div>
+        <!--this column will break wehn the screen size becomes below 576.
+        it goes to full width-->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm" style="border: 1px solid blue">Column4</div>
+        <!--this column will break wehn the screen size becomes below 576.
+          it goes to full width-->
+        <div class="col" style="border: 1px solid blue">Column5</div>
+        <div class="col-md" style="border: 1px solid blue">Column6</div>
+
+        <!-- when we write col-md the column will occupay the whole width of the screen when we
+              take the screen size below 768px . -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4" style="border: 1px solid purple">Column7</div>
+        <!-- in grid we use to specify the column we want to span by writing col-4 and will span 4 column
+        and if we donont know wether the item contain 4 or 6 column we can write col (omit -4 in this case)and this will automatically fill the remaining space-->
+        <div class="col-2" style="border: 1px solid purple">Column8</div>
+        <div class="col" style="border: 1px solid purple">Column9</div>
+        <!--col with out numbers means it will span auto or the rest of space available
+            if all columns are "col" they will be divided equally  -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!--use screen size  for sm and lg to see the difference-->
+        <div class="col-sm-4" style="border: 1px solid red">Column10</div>
+        <!-- in grid we use to specify the column we want to span by writing col-4 and will span 4 column
+        and if we donont know wether the item contain 4 or 6 column we can write col (omit -4 in this case)and this will automatically fill the remaining space-->
+        <div class="col-lg-2" style="border: 1px solid red">Column11</div>
+        <div class="col-4" style="border: 1px solid red">Column12</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <!-- justify-content-md-center will adjust the column to the center when we are on the md-viewport,
+        but if we can to apply to all then we omit md "justify-content-center" and will center the columns no matter what sizing we are in-->
+        <div class="col-sm-auto" style="border: 1px solid green">Column114</div>
+        <!-- the auto in col-sm-auto will utilize as much room as it can but will not grow to fill the 
+    entire remaing column when zooming out but will utilize the space it can only -->
+        <!--the justify content will loose its affect when the column reaches its responisve variablebreakpoint-->
+        <div class="col-lg-auto" style="border: 1px solid green">Column115</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-6 col-md-4" style="border: 1px solid purple">
+          Column13
+        </div>
+        <!-- applying different class in combination together to have different column depending on the resposive design on the view port your on-->
+        <div class="col-sm-6 col-md-4" style="border: 1px solid purple">
+          Column14
+        </div>
+        <!--till we reach the screen size at 768 the size of the column will be 4
+        if the size is less than 768 it will go size 6 column in sm-->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-sm-2 row-cols-md-4">
+        <!-- the row-cols-2 means that we can have a max of 2 columns in a row when the 
+        size is sm and when it is md cols it iwill be size 4 -->
+        <div class="col" style="border: 1px solid blue">Column15</div>
+        <div class="col" style="border: 1px solid blue">Column16</div>
+        <div class="col" style="border: 1px solid blue">Column17</div>
+        <div class="col" style="border: 1px solid blue">Column18</div>
+      </div>
+    </div>
+  </body>
+</html>
