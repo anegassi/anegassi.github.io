@@ -78,7 +78,7 @@
     <br />
     <br />
     <!-- <div id ="displaySelected"> </div> -->
-    <input type="text" id="myButton" value="My Button" />
+    <input type="text" id="myButton" value="My Xutton" />
     <br />
     <p>
       <input type="button" onclick="add()" value="click me" />
@@ -105,21 +105,21 @@
         // }
         // alert(selected);
         // ////******************//////////
-        // let control3 = document.getElementsByName("favoritecharacter");
-        // console.log(control3[0]);
-        // console.log(control3);
-        // for (let sel of control3) {
-        //   console.log(sel[2].selected, sel.value);
-        //   alert(sel[2].selected + sel.value);
-        // }
+        let control3 = document.getElementsByName("favoritecharacter");
+        console.log(control3[0]);
+        console.log(control3);
+        for (let sel of control3) {
+          console.log(sel[2].selected, sel.value);
+          alert(sel[2].selected + sel.value);
+        }
 
         // ////sel.value is the value of the select tag but sel.selected is undefined because it is not the one th
         // //that is selected rather the options so you have to do an array to find the selected option
         // //////************************///////////////
-        // let control4 = document.getElementsByName("favoritecharacterMultiple");
-        // console.log(control4[0]);
-        // console.log(control4);
-        // getSelectValues(control4[0]);
+        let control4 = document.getElementsByName("favoritecharacterMultiple");
+        console.log(control4[0]);
+        console.log(control4);
+        getSelectValues(control4[0]);
 
         ///////***********************/////////////
         let control5 = document.getElementsByName("favoritecharacterOpt");

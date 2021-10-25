@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: teal;
+      }
+      .main {
+        /* background-image: url(/cs315/images/banner.jpg);
+        height: 100vh;*/ /*this is the same as the body background image*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background: rgb(202, 184, 134);
+        width: 400px;
+      }
+      .header {
+        background-color: white;
+        padding: 20px 40px;
+      }
+      .form {
+        padding: 30px 40px;
+      }
+      .form-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .form-control label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      .form-control input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 14px;
+        border: 2px solid white;
+      }
+      .form-control small {
+        color: #e74c3c;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+      }
+      .form-control.error small {
+        visibility: visible;
+      }
+      .form .button {
+        background-color: hsl(39, 89%, 51%);
+        border: 2px solid #f59211;
+        border-radius: 4px;
+        color: #fff;
+        display: block;
+        font-family: inherit;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="header">
+          <h2>Registration form</h2>
+        </div>
+        <form action="" class="form" method="get">
+          <div class="form-control">
+            <label for="username"> username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter user name"
+            />
+            <small>sophia</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="abc@gmail.com"
+            />
+            <small></small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter a password"
+            />
+            <small></small>
+          </div>
+          <div class="form-control">
+            <label for="password2">Password Check</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              placeholder="Re-enter password"
+            />
+            <small></small>
+          </div>
+          <input type="button" class="button" value="submit" />
+        </form>
+        <script></script>
+      </div>
+    </div>
+  </body>
+</html>

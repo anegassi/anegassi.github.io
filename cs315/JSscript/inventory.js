@@ -3,7 +3,7 @@
  
 
 function add(){
-    
+   
     let productNameInput = document.getElementById("itemname").value;
         //itemList.productName=productNameInput;
        //libraryDB.push(productNameInput);
@@ -15,11 +15,13 @@ function add(){
        //libraryDB.push(quantityInput);
     let ratingInput= +(document.getElementById("ratings").value);
        const itemList = {
+           
            productName:productNameInput,
            category:categoryInput,
            quantity:quantityInput,
            ratings:ratingInput
        };
+    
        libraryDB.push(itemList)
        console.log(libraryDB)
        
@@ -30,7 +32,7 @@ function add(){
 
 function buildTable(libraryDB){
     var table = document.getElementById("myTable");
-    table.innerHTML="";
+    table.innerHTML=" ";
     for (let i = 0, rowNum=1; i < libraryDB.length; i++,rowNum++){
         
         row = `<tr>  
@@ -128,21 +130,25 @@ function sort1(){
 }
 
 let filterFunction = function(){
-    console.log(this);
-    let querySelector = document.querySelectorAll("button");
-    console.log(querySelector)
+
+    let querySelector2= document.getElementById("btnQuantity")
+    //let querySelector = document.querySelectorAll("button");
+    
     let filtered = [];
-    for  (let button of querySelector){
-        console.log(button)
-        if (button.id=="btnQuantity"){
-            filtered = libraryDB.filter( obj => obj.quantity>100);
-            break;
-        }
-        else if(button.id=="btnRating"){
-            filtered = libraryDB.filter( obj => obj.ratings>4);
-            
-        }
+    if (querySelector2.id=="btnQuantity"){
+        filtered = libraryDB.filter( obj => obj.quantity>100);
     }
+    // for  (let button of querySelector){
+    //     console.log(button)
+    //     if (button.id=="btnQuantity"){
+    //         filtered = libraryDB.filter( obj => obj.quantity>100);
+    //         break;
+    //     }
+    //     else if(button.id=="btnRating"){
+    //         filtered = libraryDB.filter( obj => obj.ratings>4);
+            
+    //     }
+    // }
     buildTable(filtered);
 }
 
